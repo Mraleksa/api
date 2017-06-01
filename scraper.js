@@ -19,6 +19,6 @@ function requestFunction(){
 var db = new sqlite3.Database('data.sqlite');
 db.exec("CREATE TABLE IF NOT EXISTS KFZ(rate INT, txt DATE PRIMARY KEY)");
 var data;
-var statement = db.prepare("INSERT OR IGNORE INTO KFZ VALUES (?, ?, ?, ?)");
+var statement = db.prepare("INSERT OR IGNORE INTO KFZ VALUES (?, ?)");
 
 
