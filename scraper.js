@@ -20,3 +20,5 @@ var db = new sqlite3.Database('data.sqlite');
 db.exec("CREATE TABLE IF NOT EXISTS KFZ(visitors INT, wait INT, nextcall INT, lastupdate DATE PRIMARY KEY)");
 var data;
 var statement = db.prepare("INSERT OR IGNORE INTO KFZ VALUES (?, ?, ?, ?)");
+
+var run = setInterval(requestFunction, 1000);
