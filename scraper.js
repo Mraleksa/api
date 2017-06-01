@@ -11,6 +11,7 @@ function requestFunction(){
                 callback();
             }], function (err) {
                 statement.run(data[0].rate, data[0].txt);
+               console.log(data[0].rate); 
             });
         }
     });
